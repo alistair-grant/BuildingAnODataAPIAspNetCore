@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f7552adb-7bff-4bb4-9c77-5ca00c4f2121",
+		"_postman_id": "160b8f29-b452-442b-b39a-13867cc9fbd3",
 		"name": "OData in ASP.NET Core",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,14 +11,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/",
-					"protocol": "http",
+					"raw": "{{service-url}}/",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						""
 					]
 				}
@@ -31,14 +28,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/$metadata",
-					"protocol": "http",
+					"raw": "{{service-url}}/$metadata",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"$metadata"
 					]
 				}
@@ -61,14 +55,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People",
-					"protocol": "http",
+					"raw": "{{service-url}}/People",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					]
 				}
@@ -81,14 +72,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/$metadata#People",
-					"protocol": "http",
+					"raw": "{{service-url}}/$metadata#People",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"$metadata"
 					],
 					"hash": "People"
@@ -102,14 +90,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/VinylRecords",
-					"protocol": "http",
+					"raw": "{{service-url}}/VinylRecords",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"VinylRecords"
 					]
 				}
@@ -127,14 +112,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People",
-					"protocol": "http",
+					"raw": "{{service-url}}/People",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					]
 				}
@@ -152,14 +134,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People",
-					"protocol": "http",
+					"raw": "{{service-url}}/People",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					]
 				}
@@ -177,14 +156,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People",
-					"protocol": "http",
+					"raw": "{{service-url}}/People",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					]
 				}
@@ -197,14 +173,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)"
 					]
 				}
@@ -222,14 +195,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/VinylRecords(1)",
-					"protocol": "http",
+					"raw": "{{service-url}}/VinylRecords(1)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"VinylRecords(1)"
 					]
 				}
@@ -247,14 +217,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(20)/Email",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(20)/Email",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(20)",
 						"Email"
 					]
@@ -273,14 +240,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(5)/UnexistingProperty",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(5)/UnexistingProperty",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(5)",
 						"UnexistingProperty"
 					]
@@ -299,14 +263,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/Email",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/Email",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"Email"
 					]
@@ -325,14 +286,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(6)/Email",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(6)/Email",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(6)",
 						"Email"
 					]
@@ -351,14 +309,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/Email/$value",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/Email/$value",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"Email",
 						"$value"
@@ -373,14 +328,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/VinylRecords",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/VinylRecords",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"VinylRecords"
 					]
@@ -407,14 +359,11 @@
 					"raw": "{    \r\n    \"FirstName\":\"John\",\r\n    \"LastName\":\"Smith\",\r\n    \"Email\": \"john.smith@someprovider.com\",    \r\n    \"Gender\":\"Male\",\r\n    \"DateOfBirth\": \"1980-01-30\",\r\n    \"NumberOfRecordsOnWishList\": 10\r\n}\r\n"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People",
-					"protocol": "http",
+					"raw": "{{service-url}}/People",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					]
 				}
@@ -440,14 +389,11 @@
 					"raw": "{      \r\n    \"FirstName\":\"Emma\",\r\n    \"LastName\":\"Smith\",\r\n    \"Email\": \"emma.smith@someprovider.com\",    \r\n    \"Gender\":\"Female\",\r\n    \"DateOfBirth\": \"1989-05-16\",\r\n    \"NumberOfRecordsOnWishList\": 10,\r\n    \"VinylRecords\": [ \r\n                        {     \r\n                            \"Title\":\"Grace\",\r\n                    \t    \"Artist\":\"Jeff Buckley\",\r\n                            \"CatalogNumber\":\"ABC/875\",\r\n                            \"PressingDetailId\": 1\r\n                    \t}\r\n                    ]\r\n}\r\n"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People",
-					"protocol": "http",
+					"raw": "{{service-url}}/People",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					]
 				}
@@ -473,14 +419,11 @@
 					"raw": "{    \r\n    \"FirstName\": \"Nick\",\r\n    \"LastName\": \"Missorten\",\r\n    \"DateOfBirth\": \"1983-05-18T00:00:00+02:00\",\r\n    \"Gender\": \"Male\",\r\n    \"NumberOfRecordsOnWishList\": 23,\r\n    \"AmountOfCashToSpend\": 2500\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People(3)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(3)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(3)"
 					]
 				}
@@ -506,14 +449,11 @@
 					"raw": "{   \r\n    \"PersonId\": 999,\r\n    \"FirstName\": \"Nick\",\r\n    \"LastName\": \"Missorten\",\r\n    \"DateOfBirth\": \"1983-05-18T00:00:00+02:00\",\r\n    \"Gender\": \"Male\",\r\n    \"Email\": \"nick@someprovider.com\",\r\n    \"NumberOfRecordsOnWishList\": 23,\r\n    \"AmountOfCashToSpend\": 2500\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People(3)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(3)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(3)"
 					]
 				}
@@ -539,14 +479,11 @@
 					"raw": "{   \r\n    \"FirstName\": \"Nick\",\r\n    \"Email\": \"nick@someprovider.com\"\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People(3)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(3)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(3)"
 					]
 				}
@@ -572,14 +509,11 @@
 					"raw": "{   \r\n    \"PersonId\": 999,\r\n    \"FirstName\": \"Nick\",\r\n    \"Email\": \"nick@someprovider.com\"\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People(3)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(3)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(3)"
 					]
 				}
@@ -605,14 +539,11 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People(3)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(3)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(3)"
 					]
 				}
@@ -634,14 +565,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$select=Email",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$select=Email",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -669,14 +597,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$select=Email,FirstName",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$select=Email,FirstName",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -704,14 +629,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)?$select=Email,FirstName",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)?$select=Email,FirstName",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)"
 					],
 					"query": [
@@ -739,14 +661,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/VinylRecords?$select=Title",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/VinylRecords?$select=Title",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"VinylRecords"
 					],
@@ -775,14 +694,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$expand=VinylRecords",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$expand=VinylRecords",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -810,14 +726,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$expand=VinylRecords($expand=PressingDetail)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$expand=VinylRecords($expand=PressingDetail)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -845,14 +758,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$select=Email,FirstName&$expand=VinylRecords",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$select=Email,FirstName&$expand=VinylRecords",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -884,14 +794,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$select=Email,FirstName&$expand=VinylRecords($select=Title)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$select=Email,FirstName&$expand=VinylRecords($select=Title)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -923,14 +830,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$select=Email,FirstName&$expand=VinylRecords($select=Title;$expand=PressingDetail($select=Grams))",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$select=Email,FirstName&$expand=VinylRecords($select=Title;$expand=PressingDetail($select=Grams))",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -962,14 +866,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)?$select=Email,FirstName&$expand=VinylRecords($select=Title)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)?$select=Email,FirstName&$expand=VinylRecords($select=Title)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)"
 					],
 					"query": [
@@ -1001,14 +902,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$orderby=Email",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$orderby=Email",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1036,14 +934,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$orderby=Email desc",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$orderby=Email desc",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1071,14 +966,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$orderby=Gender, Email",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$orderby=Gender, Email",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1106,14 +998,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$orderby=Gender desc, Email",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$orderby=Gender desc, Email",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1141,14 +1030,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$orderby=Gender desc, Email desc&$expand=VinylRecords($orderby=Title)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$orderby=Gender desc, Email desc&$expand=VinylRecords($orderby=Title)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1180,14 +1066,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$orderby=Gender desc, Email desc&$expand=VinylRecords($select=Title;$orderby=Title)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$orderby=Gender desc, Email desc&$expand=VinylRecords($select=Title;$orderby=Title)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1219,14 +1102,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)?$orderby=Gender desc, Email desc&$expand=VinylRecords($select=Title;$orderby=Title)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)?$orderby=Gender desc, Email desc&$expand=VinylRecords($select=Title;$orderby=Title)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)"
 					],
 					"query": [
@@ -1258,14 +1138,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)?$expand=VinylRecords($select=Title;$orderby=Title)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)?$expand=VinylRecords($select=Title;$orderby=Title)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)"
 					],
 					"query": [
@@ -1293,14 +1170,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$top=2",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$top=2",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1328,14 +1202,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$top=5",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$top=5",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1363,14 +1234,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$count=true",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$count=true",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1398,14 +1266,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$count=true&$skip=2",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$count=true&$skip=2",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1437,14 +1302,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$top=11",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$top=11",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1472,14 +1334,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$top=2&$skip=15",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$top=2&$skip=15",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1502,14 +1361,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=FirstName eq 'Kevin'",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=FirstName eq 'Kevin'",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1528,14 +1384,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=PersonId gt 3",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=PersonId gt 3",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1554,14 +1407,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=DateOfBirth le 1981-05-05T00:00:00Z",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=DateOfBirth le 1981-05-05T00:00:00Z",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1580,14 +1430,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=Gender eq AirVinyl.Gender'Female'",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=Gender eq AirVinyl.Gender'Female'",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1606,14 +1453,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=PersonId lt 3 and FirstName eq 'Kevin'",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=PersonId lt 3 and FirstName eq 'Kevin'",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1632,14 +1476,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=PersonId lt 3 or FirstName eq 'Kevin'",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=PersonId lt 3 or FirstName eq 'Kevin'",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1658,14 +1499,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$expand=VinylRecords($filter=Year ge 2000)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$expand=VinylRecords($filter=Year ge 2000)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1684,14 +1522,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$expand=VinylRecords($filter=Year eq null)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$expand=VinylRecords($filter=Year eq null)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1710,14 +1545,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$expand=VinylRecords($filter=PressingDetail/Grams ge 100)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$expand=VinylRecords($filter=PressingDetail/Grams ge 100)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1736,14 +1568,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=VinylRecords/any(vr:vr/Artist eq 'Arctic Monkeys')&$expand=VinylRecords",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=VinylRecords/any(vr:vr/Artist eq 'Arctic Monkeys')&$expand=VinylRecords",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1766,14 +1595,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=VinylRecords/all(vr:vr/Artist eq 'Abba')&$expand=VinylRecords",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=VinylRecords/all(vr:vr/Artist eq 'Abba')&$expand=VinylRecords",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1796,14 +1622,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=NumberOfRecordsOnWishList add 10 eq 20",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=NumberOfRecordsOnWishList add 10 eq 20",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1822,14 +1645,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=AmountOfCashToSpend div NumberOfRecordsOnWishList gt 10",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=AmountOfCashToSpend div NumberOfRecordsOnWishList gt 10",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1848,14 +1668,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=AmountOfCashToSpend add 1500 div 3 gt 600",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=AmountOfCashToSpend add 1500 div 3 gt 600",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1874,14 +1691,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=(AmountOfCashToSpend add 1500) div 3 gt 600",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=(AmountOfCashToSpend add 1500) div 3 gt 600",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1900,14 +1714,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=endswith(FirstName, 'n')",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=endswith(FirstName, 'n')",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1926,14 +1737,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=length(Email) eq 26",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=length(Email) eq 26",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1952,14 +1760,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=year(DateOfBirth) eq 1981",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=year(DateOfBirth) eq 1981",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -1978,14 +1783,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$filter=length(Email) eq 26 and endswith(FirstName, 'n')",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$filter=length(Email) eq 26 and endswith(FirstName, 'n')",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -2004,14 +1806,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores(1)/Tags",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores(1)/Tags",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores(1)",
 						"Tags"
 					]
@@ -2025,14 +1824,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores(1)/Tags?$filter=startswith($it, 'R')",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores(1)/Tags?$filter=startswith($it, 'R')",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores(1)",
 						"Tags"
 					],
@@ -2052,14 +1848,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/odata/People?$expand=VinylRecords($filter=year($it/DateOfBirth) lt Year)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People?$expand=VinylRecords($filter=year($it/DateOfBirth) lt Year)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People"
 					],
 					"query": [
@@ -2087,14 +1880,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/VinylRecords",
-					"protocol": "http",
+					"raw": "{{service-url}}/VinylRecords",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"VinylRecords"
 					]
 				}
@@ -2116,14 +1906,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/VinylRecords",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/VinylRecords",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"VinylRecords"
 					]
@@ -2146,14 +1933,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/VinylRecords(1)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/VinylRecords(1)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"VinylRecords(1)"
 					]
@@ -2180,14 +1964,11 @@
 					"raw": "{\r\n  \"Title\": \"Bleach\",\r\n  \"Artist\": \"Nirvana\",\r\n  \"CatalogNumber\": \"ARC/101\",\r\n  \"Year\": 1989,\r\n  \"PressingDetailId\": 1\r\n}\r\n"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/VinylRecords",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/VinylRecords",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"VinylRecords"
 					]
@@ -2214,14 +1995,11 @@
 					"raw": "{\r\n\"Artist\": \"Nirvana updated\" \r\n}\r\n"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/VinylRecords(1)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/VinylRecords(1)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"VinylRecords(1)"
 					]
@@ -2248,14 +2026,11 @@
 					"raw": "{\r\n    \"Artist\": \"Nirvana updated\",\r\n    \"Person\": { \"PersonId\" : 5 }\r\n}\r\n"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/VinylRecords(1)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/VinylRecords(1)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"VinylRecords(1)"
 					]
@@ -2282,14 +2057,11 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/VinylRecords(6)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/VinylRecords(6)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"VinylRecords(6)"
 					]
@@ -2312,14 +2084,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores(1)/AirVinyl.Functions.IsHighRated(minimumRating=1)",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores(1)/AirVinyl.Functions.IsHighRated(minimumRating=1)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores(1)",
 						"AirVinyl.Functions.IsHighRated(minimumRating=1)"
 					]
@@ -2342,14 +2111,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores/AirVinyl.Functions.AreRatedBy(personIds=[1,2])",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores/AirVinyl.Functions.AreRatedBy(personIds=[1,2])",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores",
 						"AirVinyl.Functions.AreRatedBy(personIds=[1,2])"
 					]
@@ -2372,14 +2138,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores/AirVinyl.Functions.AreRatedBy(personIds=[7])",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores/AirVinyl.Functions.AreRatedBy(personIds=[7])",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores",
 						"AirVinyl.Functions.AreRatedBy(personIds=[7])"
 					]
@@ -2402,14 +2165,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores/AirVinyl.Functions.AreRatedBy(personIds=[4,5])",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores/AirVinyl.Functions.AreRatedBy(personIds=[4,5])",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores",
 						"AirVinyl.Functions.AreRatedBy(personIds=[4,5])"
 					]
@@ -2432,14 +2192,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/GetHighRatedRecordStores(minimumRating=3)",
-					"protocol": "http",
+					"raw": "{{service-url}}/GetHighRatedRecordStores(minimumRating=3)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"GetHighRatedRecordStores(minimumRating=3)"
 					]
 				}
@@ -2465,14 +2222,11 @@
 					"raw": "{ \"personId\": 4, \"rating\": 5}\r\n"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores(1)/AirVinyl.Actions.Rate",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores(1)/AirVinyl.Actions.Rate",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores(1)",
 						"AirVinyl.Actions.Rate"
 					]
@@ -2499,14 +2253,11 @@
 					"raw": "{ \"personId\": 1}\r\n"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores/AirVinyl.Actions.RemoveRatings",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores/AirVinyl.Actions.RemoveRatings",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores",
 						"AirVinyl.Actions.RemoveRatings"
 					]
@@ -2533,14 +2284,11 @@
 					"raw": "{ \"personId\": 2}\r\n"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/RemoveRecordStoreRatings",
-					"protocol": "http",
+					"raw": "{{service-url}}/RemoveRecordStoreRatings",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RemoveRecordStoreRatings"
 					]
 				}
@@ -2562,14 +2310,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/Tim",
-					"protocol": "http",
+					"raw": "{{service-url}}/Tim",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"Tim"
 					]
 				}
@@ -2595,14 +2340,11 @@
 					"raw": "{\r\n    \"NumberOfRecordsOnWishList\": 30,\r\n    \"AmountOfCashToSpend\": 200\r\n}\r\n"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/Tim",
-					"protocol": "http",
+					"raw": "{{service-url}}/Tim",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"Tim"
 					]
 				}
@@ -2624,14 +2366,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores"
 					]
 				}
@@ -2653,14 +2392,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores/AirVinyl.SpecializedRecordStore",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores/AirVinyl.SpecializedRecordStore",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores",
 						"AirVinyl.SpecializedRecordStore"
 					]
@@ -2683,14 +2419,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores(2)/AirVinyl.SpecializedRecordStore",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores(2)/AirVinyl.SpecializedRecordStore",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores(2)",
 						"AirVinyl.SpecializedRecordStore"
 					]
@@ -2713,14 +2446,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores(1)/AirVinyl.SpecializedRecordStore",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores(1)/AirVinyl.SpecializedRecordStore",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores(1)",
 						"AirVinyl.SpecializedRecordStore"
 					]
@@ -2743,14 +2473,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores/AirVinyl.SpecializedRecordStore?$filter=Specialization eq 'Indie'",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores/AirVinyl.SpecializedRecordStore?$filter=Specialization eq 'Indie'",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores",
 						"AirVinyl.SpecializedRecordStore"
 					],
@@ -2779,14 +2506,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores(2)/AirVinyl.SpecializedRecordStore?$select=Specialization",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores(2)/AirVinyl.SpecializedRecordStore?$select=Specialization",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores(2)",
 						"AirVinyl.SpecializedRecordStore"
 					],
@@ -2815,14 +2539,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores(1)?$select=Specialization",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores(1)?$select=Specialization",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores(1)"
 					],
 					"query": [
@@ -2854,14 +2575,11 @@
 					"raw": " {\r\n    \"Name\": \"New Regular Store\"\r\n }"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores"
 					]
 				}
@@ -2887,14 +2605,11 @@
 					"raw": "{\r\n    \"Name\": \"New Specialized Store\",\r\n    \"Specialization\": \"Pop\"\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores"
 					]
 				}
@@ -2920,14 +2635,11 @@
 					"raw": "{\r\n    \"@odata.type\": \"#AirVinyl.SpecializedRecordStore\",\r\n    \"Name\": \"New Specialized Store\",\r\n    \"Specialization\": \"Pop\"\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores"
 					]
 				}
@@ -2953,14 +2665,11 @@
 					"raw": "{\r\n  \"@odata.type\": \"#AirVinyl.SpecializedRecordStore\",\r\n  \"Specialization\": \"Metal\"\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores(2)/AirVinyl.SpecializedRecordStore",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores(2)/AirVinyl.SpecializedRecordStore",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores(2)",
 						"AirVinyl.SpecializedRecordStore"
 					]
@@ -2987,14 +2696,11 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/RecordStores(2)/AirVinyl.SpecializedRecordStore",
-					"protocol": "http",
+					"raw": "{{service-url}}/RecordStores(2)/AirVinyl.SpecializedRecordStore",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"RecordStores(2)",
 						"AirVinyl.SpecializedRecordStore"
 					]
@@ -3017,14 +2723,11 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/VinylRecords(1)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/VinylRecords(1)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"VinylRecords(1)"
 					]
@@ -3051,14 +2754,11 @@
 					"raw": "{\r\n  \"Title\": \"In Utero\",\r\n  \"Artist\": \"Nirvana\",\r\n  \"CatalogNumber\": \"ARG/431\",\r\n  \"PressingDetailId\": 1,\r\n  \"Year\": 1993,\r\n  \"Publisher\": \"Geffen\",\r\n  \"Producer\": \"Steve Albini\"\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/VinylRecords",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/VinylRecords",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"VinylRecords"
 					]
@@ -3085,14 +2785,11 @@
 					"raw": "{\r\n    \"Publisher\": \"Geffen updated\",\r\n    \"Producer\" : \"Butch Vig\"\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/People(1)/VinylRecords(24)",
-					"protocol": "http",
+					"raw": "{{service-url}}/People(1)/VinylRecords(24)",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"People(1)",
 						"VinylRecords(24)"
 					]
@@ -3116,17 +2813,14 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http \r\nContent-Transfer-Encoding:binary\r\n\r\nGET http://localhost:5000/odata/People(1)/VinylRecords HTTP/1.1\r\nAccept: application/json\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf--"
+					"raw": "--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http \r\nContent-Transfer-Encoding:binary\r\n\r\nGET {{service-url}}/People(1)/VinylRecords HTTP/1.1\r\nAccept: application/json\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf--"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/$batch",
-					"protocol": "http",
+					"raw": "{{service-url}}/$batch",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"$batch"
 					]
 				}
@@ -3149,17 +2843,14 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http \r\nContent-Transfer-Encoding:binary\r\n\r\nGET http://localhost:5000/odata/People(1)/VinylRecords HTTP/1.1\r\nAccept: application/json\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http\r\nContent-Transfer-Encoding:binary\r\n\r\nGET http://localhost:5000/odata/People(2)/VinylRecords HTTP/1.1\r\nAccept: application/json\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf--"
+					"raw": "--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http \r\nContent-Transfer-Encoding:binary\r\n\r\nGET {{service-url}}/People(1)/VinylRecords HTTP/1.1\r\nAccept: application/json\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http\r\nContent-Transfer-Encoding:binary\r\n\r\nGET {{service-url}}/People(2)/VinylRecords HTTP/1.1\r\nAccept: application/json\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf--"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/$batch",
-					"protocol": "http",
+					"raw": "{{service-url}}/$batch",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"$batch"
 					]
 				}
@@ -3182,17 +2873,14 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http\r\nContent-Transfer-Encoding:binary\r\n\r\nPOST http://localhost:5000/odata/People(2)/VinylRecords HTTP/1.1\r\nContent-Type: application/json\r\nAccept: application/json\r\n\r\n{\r\n  \"Title\": \"Communion\",\r\n  \"Artist\": \"Years and Years\",\r\n  \"CatalogNumber\": \"IOP/757\",\r\n  \"Year\": 2015,\r\n  \"PressingDetailId\": 1\r\n}\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http\r\nContent-Transfer-Encoding:binary\r\n\r\nPATCH http://localhost:5000/odata/People(1)/VinylRecords(1) HTTP/1.1\r\nContent-Type: application/json\r\nAccept: application/json\r\n\r\n{\r\n  \"Title\": \"Nevermind Updated\"\r\n}\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http\r\nContent-Transfer-Encoding:binary\r\n\r\nGET http://localhost:5000/odata/People(1)/VinylRecords HTTP/1.1\r\nAccept: application/json\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http\r\nContent-Transfer-Encoding:binary\r\n\r\nGET http://localhost:5000/odata/People(2)/VinylRecords HTTP/1.1\r\nAccept: application/json\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf--"
+					"raw": "--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http\r\nContent-Transfer-Encoding:binary\r\n\r\nPOST {{service-url}}/People(2)/VinylRecords HTTP/1.1\r\nContent-Type: application/json\r\nAccept: application/json\r\n\r\n{\r\n  \"Title\": \"Communion\",\r\n  \"Artist\": \"Years and Years\",\r\n  \"CatalogNumber\": \"IOP/757\",\r\n  \"Year\": 2015,\r\n  \"PressingDetailId\": 1\r\n}\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http\r\nContent-Transfer-Encoding:binary\r\n\r\nPATCH {{service-url}}/People(1)/VinylRecords(1) HTTP/1.1\r\nContent-Type: application/json\r\nAccept: application/json\r\n\r\n{\r\n  \"Title\": \"Nevermind Updated\"\r\n}\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http\r\nContent-Transfer-Encoding:binary\r\n\r\nGET {{service-url}}/People(1)/VinylRecords HTTP/1.1\r\nAccept: application/json\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf\r\nContent-Type: application/http\r\nContent-Transfer-Encoding:binary\r\n\r\nGET {{service-url}}/People(2)/VinylRecords HTTP/1.1\r\nAccept: application/json\r\n\r\n--batch_a8ba333b-34b7-4699-bdfa-af8d46dbbcbf--"
 				},
 				"url": {
-					"raw": "http://localhost:5000/odata/$batch",
-					"protocol": "http",
+					"raw": "{{service-url}}/$batch",
 					"host": [
-						"localhost"
+						"{{service-url}}"
 					],
-					"port": "5000",
 					"path": [
-						"odata",
 						"$batch"
 					]
 				}
