@@ -106,5 +106,29 @@ namespace AirVinyl.Controllers
 
             return Ok(propertyValue.ToString());
         }
+
+        // odata/People(key)/VinylRecords
+        [HttpGet("odata/People({key})/VinylRecords")]
+        public async Task<IActionResult> GetPersonCollectionProperty(int key)
+        {
+            var url = HttpContext.Request.GetEncodedUrl();
+            var collectionPropertyToGet = new Uri(url).Segments.Last();
+
+            var person = await _airVinylDbContext.People
+                .Include(collectionPropertyToGet)
+                .FirstOrDefaultAsync(p => p.PersonId == key);
+
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+            if (!person.HasProperty(collectionPropertyToGet))
+            {
+                return NotFound();
+            }
+
+            return Ok(person.GetValue(collectionPropertyToGet));
+        }
     }
 }
