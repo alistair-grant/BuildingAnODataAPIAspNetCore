@@ -1,33 +1,32 @@
 ﻿using AirVinyl.API.DbContexts;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Threading.Tasks;
 
 namespace AirVinyl.Controllers
 {
-    [Route("odata")]
-    public class VinylRecordsController : ODataController
+    public class VinylRecordsController : ODataApiController
     {
-        private readonly AirVinylDbContext _airVinylDbContext;
+        private const string EntitySetTemplate = "VinylRecords";
+        private const string EntityTypeTemplate = EntitySetTemplate + "({key})";
 
-        public VinylRecordsController(AirVinylDbContext airVinylDbContext)
+        private readonly AirVinylDbContext _dbContext;
+
+        public VinylRecordsController(AirVinylDbContext dbContext)
         {
-            _airVinylDbContext = airVinylDbContext
-                ?? throw new ArgumentNullException(nameof(airVinylDbContext));
+            _dbContext = dbContext;
         }
 
-        [HttpGet("VinylRecords")]
-        public async Task<IActionResult> GetAllVinylRecords()
+        [HttpGet(EntitySetTemplate)]
+        public async Task<IActionResult> GetVinylRecords()
         {
-            return Ok(await _airVinylDbContext.VinylRecords.ToListAsync());
+            return Ok(await _dbContext.VinylRecords.ToListAsync());
         }
 
-        [HttpGet("VinylRecords({key})")]
-        public async Task<IActionResult> GetOneVinylRecord(int key)
+        [HttpGet(EntityTypeTemplate)]
+        public async Task<IActionResult> GetVinylRecord(int key)
         {
-            var vinylRecord = await _airVinylDbContext.VinylRecords
+            var vinylRecord = await _dbContext.VinylRecords
                 .FirstOrDefaultAsync(r => r.VinylRecordId == key);
 
             if (vinylRecord == null)

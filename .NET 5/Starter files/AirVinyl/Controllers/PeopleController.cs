@@ -1,8 +1,8 @@
 ﻿using AirVinyl.API.DbContexts;
 using AirVinyl.API.Helpers;
+using AirVinyl.Entities;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
@@ -10,25 +10,28 @@ using System.Threading.Tasks;
 
 namespace AirVinyl.Controllers
 {
-    public class PeopleController : ODataController
+    public class PeopleController : ODataApiController
     {
-        private readonly AirVinylDbContext _airVinylDbContext;
+        private const string EntitySetTemplate = "People";
+        private const string EntityTypeTemplate = EntitySetTemplate + "({key})";
 
-        public PeopleController(AirVinylDbContext airVinylDbContext)
+        private readonly AirVinylDbContext _dbContext;
+
+        public PeopleController(AirVinylDbContext dbContext)
         {
-            _airVinylDbContext = airVinylDbContext
-                ?? throw new ArgumentNullException(nameof(airVinylDbContext));
+            _dbContext = dbContext;
         }
 
-        public async Task<IActionResult> Get()
+        [HttpGet(EntitySetTemplate)]
+        public async Task<IActionResult> GetPeople()
         {
-            return Ok(await _airVinylDbContext.People.ToListAsync());
+            return Ok(await _dbContext.People.ToListAsync());
         }
 
-        // People(1)
-        public async Task<IActionResult> Get(int key)
+        [HttpGet(EntityTypeTemplate)]
+        public async Task<IActionResult> GetPerson(int key)
         {
-            var person = await _airVinylDbContext.People
+            var person = await _dbContext.People
                 .FirstOrDefaultAsync(p => p.PersonId == key);
 
             if (person == null)
@@ -39,14 +42,14 @@ namespace AirVinyl.Controllers
             return Ok(person);
         }
 
-        [HttpGet("odata/People({key})/Email")]
-        [HttpGet("odata/People({key})/LastName")]
-        [HttpGet("odata/People({key})/FirstName")]
-        [HttpGet("odata/People({key})/DateOfBirth")]
-        [HttpGet("odata/People({key})/Gender")]
+        [HttpGet(EntityTypeTemplate + "/Email")]
+        [HttpGet(EntityTypeTemplate + "/LastName")]
+        [HttpGet(EntityTypeTemplate + "/FirstName")]
+        [HttpGet(EntityTypeTemplate + "/DateOfBirth")]
+        [HttpGet(EntityTypeTemplate + "/Gender")]
         public async Task<IActionResult> GetPersonProperty(int key)
         {
-            var person = await _airVinylDbContext.People
+            var person = await _dbContext.People
                 .FirstOrDefaultAsync(p => p.PersonId == key);
 
             if (person == null)
@@ -54,8 +57,7 @@ namespace AirVinyl.Controllers
                 return NotFound();
             }
 
-            var url = HttpContext.Request.GetEncodedUrl();
-            var propertyToGet = new Uri(url).Segments.Last();
+            var propertyToGet = GetRequestUri().Segments.Last();
 
             if (!person.HasProperty(propertyToGet))
             {
@@ -73,14 +75,14 @@ namespace AirVinyl.Controllers
             return Ok(propertyValue);
         }
 
-        [HttpGet("odata/People({key})/Email/$value")]
-        [HttpGet("odata/People({key})/LastName/$value")]
-        [HttpGet("odata/People({key})/FirstName/$value")]
-        [HttpGet("odata/People({key})/DateOfBirth/$value")]
-        [HttpGet("odata/People({key})/Gender/$value")]
+        [HttpGet(EntityTypeTemplate + "/Email/$value")]
+        [HttpGet(EntityTypeTemplate + "/LastName/$value")]
+        [HttpGet(EntityTypeTemplate + "/FirstName/$value")]
+        [HttpGet(EntityTypeTemplate + "/DateOfBirth/$value")]
+        [HttpGet(EntityTypeTemplate + "/Gender/$value")]
         public async Task<IActionResult> GetPersonPropertyRawValue(int key)
         {
-            var person = await _airVinylDbContext.People
+            var person = await _dbContext.People
                 .FirstOrDefaultAsync(p => p.PersonId == key);
 
             if (person == null)
@@ -88,8 +90,7 @@ namespace AirVinyl.Controllers
                 return NotFound();
             }
 
-            var url = HttpContext.Request.GetEncodedUrl();
-            var propertyToGet = new Uri(url).Segments[^2].TrimEnd('/');
+            var propertyToGet = GetRequestUri().Segments[^2].TrimEnd('/');
 
             if (!person.HasProperty(propertyToGet))
             {
@@ -107,14 +108,12 @@ namespace AirVinyl.Controllers
             return Ok(propertyValue.ToString());
         }
 
-        // odata/People(key)/VinylRecords
-        [HttpGet("odata/People({key})/VinylRecords")]
+        [HttpGet(EntityTypeTemplate + "/VinylRecords")]
         public async Task<IActionResult> GetPersonCollectionProperty(int key)
         {
-            var url = HttpContext.Request.GetEncodedUrl();
-            var collectionPropertyToGet = new Uri(url).Segments.Last();
+            var collectionPropertyToGet = GetRequestUri().Segments.Last();
 
-            var person = await _airVinylDbContext.People
+            var person = await _dbContext.People
                 .Include(collectionPropertyToGet)
                 .FirstOrDefaultAsync(p => p.PersonId == key);
 
@@ -129,6 +128,17 @@ namespace AirVinyl.Controllers
             }
 
             return Ok(person.GetValue(collectionPropertyToGet));
+        }
+
+        [HttpPost(EntitySetTemplate)]
+        public async Task<IActionResult> CreatePerson([FromBody] Person person)
+        {
+            // add the person to the People collection
+            _dbContext.People.Add(person);
+            await _dbContext.SaveChangesAsync();
+
+            // return the created person
+            return Created(person);
         }
     }
 }
