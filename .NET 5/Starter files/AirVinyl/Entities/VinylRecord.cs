@@ -26,6 +26,6 @@ namespace AirVinyl.Entities
 
         public virtual Person Person { get; set; }
 
-        public int PersonId { get; set; } 
+        public int PersonId { get; set; }
     }
 }

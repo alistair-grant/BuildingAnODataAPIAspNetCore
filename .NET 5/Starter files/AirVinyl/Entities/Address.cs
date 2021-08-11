@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AirVinyl.Entities
 {
@@ -20,6 +19,6 @@ namespace AirVinyl.Entities
         [StringLength(100)]
         public string Country { get; set; }
 
-        public int RecordStoreId { get; set; }         
+        public int RecordStoreId { get; set; }
     }
 }

@@ -4,9 +4,9 @@ namespace AirVinyl.Entities
 {
     public class PressingDetail
     {
-        [Key] 
+        [Key]
         public int PressingDetailId { get; set; }
- 
+
         [Required]
         public int Grams { get; set; }
 

@@ -18,9 +18,9 @@ namespace AirVinyl.API.DbContexts
 
         public AirVinylDbContext(DbContextOptions<AirVinylDbContext> options)
            : base(options)
-        { 
+        {
         }
-         
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<PressingDetail>().HasData(
@@ -98,7 +98,7 @@ namespace AirVinyl.API.DbContexts
                     LastName = "Missorten",
                     Gender = Gender.Male,
                     NumberOfRecordsOnWishList = 23,
-                    AmountOfCashToSpend = 2500 
+                    AmountOfCashToSpend = 2500
                 },
                 new Person()
                 {
@@ -110,7 +110,7 @@ namespace AirVinyl.API.DbContexts
                     Gender = Gender.Male,
                     NumberOfRecordsOnWishList = 19,
                     AmountOfCashToSpend = 90
-                },                
+                },
                 new Person()
                 {
                     PersonId = 6,
@@ -120,7 +120,7 @@ namespace AirVinyl.API.DbContexts
                     LastName = "Mills",
                     Gender = Gender.Male,
                     NumberOfRecordsOnWishList = 98,
-                    AmountOfCashToSpend = 200 
+                    AmountOfCashToSpend = 200
                 }
             );
 
@@ -316,7 +316,7 @@ namespace AirVinyl.API.DbContexts
                      Specialization = "Rock"
                  });
 
-                c.OwnsOne(r => r.StoreAddress).HasData(                  
+                c.OwnsOne(r => r.StoreAddress).HasData(
                   new Address()
                   {
                       RecordStoreId = 2,
@@ -335,7 +335,7 @@ namespace AirVinyl.API.DbContexts
                   }
               );
             });
-             
+
             modelBuilder.Entity<RecordStore>(c =>
             {
                 c.HasData(new RecordStore()
@@ -353,15 +353,15 @@ namespace AirVinyl.API.DbContexts
                        PostalCode = "2000",
                        Street = "25, Fluffy Road",
                        Country = "Belgium"
-                   } 
+                   }
               );
-            });              
+            });
 
             modelBuilder.Entity<Rating>().HasData(
                 new Rating()
-                {    
+                {
                     RatingId = 1,
-                    RecordStoreId = 1, 
+                    RecordStoreId = 1,
                     RatedByPersonId = 1,
                     Value = 4
                 },
@@ -408,6 +408,6 @@ namespace AirVinyl.API.DbContexts
                     Value = 4
                 }
             );
-        }    
+        }
     }
 }

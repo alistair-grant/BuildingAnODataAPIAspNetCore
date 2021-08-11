@@ -12,7 +12,7 @@ namespace AirVinyl.Entities
 
         [Required]
         public Person RatedBy { get; set; }
-       
+
         public int RatedByPersonId { get; set; }
 
         [Required]

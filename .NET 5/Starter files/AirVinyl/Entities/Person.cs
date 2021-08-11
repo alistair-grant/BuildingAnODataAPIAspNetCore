@@ -8,8 +8,8 @@ namespace AirVinyl.Entities
     {
         [Key]
         public int PersonId { get; set; }
-        
-        [StringLength(100)]    
+
+        [StringLength(100)]
         public string Email { get; set; }
 
         [Required]

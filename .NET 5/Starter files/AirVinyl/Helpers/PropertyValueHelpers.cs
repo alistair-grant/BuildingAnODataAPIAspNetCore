@@ -20,7 +20,7 @@ namespace AirVinyl.API.Helpers
             {
                 throw new Exception("Can't find property with name " + propertyName);
             }
-            return propertyInfo.GetValue(instance, new object[] { }); 
+            return propertyInfo.GetValue(instance, new object[] { });
         }
-    } 
+    }
 }
