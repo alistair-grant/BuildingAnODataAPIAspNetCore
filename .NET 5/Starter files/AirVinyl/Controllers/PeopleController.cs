@@ -1,10 +1,9 @@
 ﻿using AirVinyl.API.DbContexts;
 using AirVinyl.API.Helpers;
 using AirVinyl.Entities;
-using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Deltas;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -131,7 +130,7 @@ namespace AirVinyl.Controllers
         }
 
         [HttpPost(EntitySetTemplate)]
-        public async Task<IActionResult> CreatePerson([FromBody] Person person)
+        public async Task<IActionResult> CreatePerson(Person person)
         {
             // add the person to the People collection
             _dbContext.People.Add(person);
@@ -139,6 +138,41 @@ namespace AirVinyl.Controllers
 
             // return the created person
             return Created(person);
+        }
+
+        [HttpPut(EntityTypeTemplate)]
+        public async Task<IActionResult> UpdatePerson(int key, Person person)
+        {
+            var currentPerson = await _dbContext.People
+                .FirstOrDefaultAsync(p => p.PersonId == key);
+
+            if (currentPerson == null)
+            {
+                return NotFound();
+            }
+
+            person.PersonId = currentPerson.PersonId;
+            _dbContext.Entry(currentPerson).CurrentValues.SetValues(person);
+            await _dbContext.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpPatch(EntityTypeTemplate)]
+        public async Task<IActionResult> UpdatePerson(int key, Delta<Person> patch)
+        {
+            var currentPerson = await _dbContext.People
+                .FirstOrDefaultAsync(p => p.PersonId == key);
+
+            if (currentPerson == null)
+            {
+                return NotFound();
+            }
+
+            patch.Patch(currentPerson);
+            await _dbContext.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }
